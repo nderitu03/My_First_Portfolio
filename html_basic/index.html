@@ -5,49 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First Cool Webpage</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            text-align: center;
-            padding: 40px;
-            min-height: 100vh;
-            margin: 0;
-        }
-        h1 { margin: 30px 0 20px; }
-        p { max-width: 700px; margin: 20px auto; line-height: 1.6; font-size: 18px; }
-        img {
-            width: 200px;
-            margin: 40px auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-            transition: transform 0.3s;
-        }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #667eea, #764ba2); color: white; margin: 0; min-height: 100vh; display: flex; flex-direction: column; }
+        header, footer { background: rgba(0,0,0,0.3); padding: 20px; text-align: center; }
+        nav ul { list-style: none; padding: 0; margin: 0; }
+        nav ul li { display: inline; margin: 0 20px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; font-size: 18px; }
+        nav a:hover { text-decoration: underline; }
+        main { flex: 1; padding: 40px; text-align: center; }
+        aside { background: rgba(255,255,255,0.1); padding: 20px; margin: 30px auto; max-width: 600px; border-radius: 12px; }
+        img { width: 200px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin: 30px 0; transition: 0.3s; }
         img:hover { transform: scale(1.1); }
-        a { color: white; text-decoration: none; }
+        .back-link { display: inline-block; background: white; color: #667eea; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to My First Portfolio</h1>
-    
-    <h2>I'm Learning Web Development</h2>
-    
-    <p>Hello! My name is [Your Name] and this is my very first real webpage. I'm super excited to be learning HTML and CSS.</p>
-    
-    <h3>Why I Joined This Journey</h3>
-    
-    <p>I want to become a full-stack developer and build amazing things for the internet. Every expert was once a beginner — and today I'm taking my first big step!</p>
-    
-    <p>This page uses headings, paragraphs, a clickable image with hover effect, and a beautiful gradient background — all with pure HTML and CSS, no frameworks!</p>
-    
-    <h3>Click the logo below to visit ALX</h3>
-    
-    <a href="https://www.alxafrica.com" target="_blank">
-        <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="ALX Logo">
-    </a>
-    
-    <p>Made with hard work and a lot of coffee — 2025</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tweets.html">Tweets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h1>Welcome to My First Portfolio</h1>
+            <h2>I'm Learning Web Development</h2>
+            <p>Hello! My name is Simon Nderitu and this is my very first real webpage. I'm super excited to be learning HTML and CSS.</p>
+            <h3>Why I Joined This Journey</h3>
+            <p>I want to become a full-stack developer and build amazing things for the internet. Every expert was once a beginner — and today I'm taking my first big step!</p>
+            <p>This page uses proper semantic HTML5 tags: header, main, article, aside, footer — all with clean navigation!</p>
+            <h3>Click the logo to visit ALX</h3>
+            <a href="https://www.alxafrica.com" target="_blank">
+                <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="ALX Logo">
+            </a>
+            <br>
+            <a href="tweets.html" class="back-link">See My Favorite Tweets</a>
+        </article>
+
+        <aside>
+            <p>placeholder to add comment thread later</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Made by Simon Nderitu - <a href="https://x.com/SimonNderitu03" target="_blank">here</a></p>
+    </footer>
 
 </body>
 </html>
